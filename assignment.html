@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assignmentcss.css">
+</head>
+<body>
+    <div class="head">
+    <h1>Welcome to <span style="color:red">My Website</span></h1>
+    <h2>Advanced HTML,CSS & JS Example</h2>
+    </div>
+<div class="p2">
+<p>click me to change my colour!This is a more challanging HTML page for students.famous quote:Learning never exhausts the mind".Code example:console.log("hello world")<br>
+"the best way to predict the future is to create it"-Abraham Lincoln</p>
+<img src="https://images.icon-icons.com/1852/PNG/512/iconfinder-websitebuilder-4417110_116613.png">
+</div>
+<div class="p2" >
+    <h1>Student Data Table</h1>
+    <table id="datatab" style="border: 1px;"></table>
+    <tr>Name</tr>
+    <tr>Age</tr>
+    <tr>Course</tr>
+        <script>
+        students=[{name:"shoaib",age:"23",course:"computer science"},{name:"shoaib",age:"23",course:"computer science"},{name:"shoaib",age:"23",course:"computer science"}]
+        tableref=document.getElementById("datatab");
+        students.forEach(el => {
+                    let li = document.createElement("tr");
+                    let tdname=document.createElement("td");
+                    let tdcourse=document.createElement("td");
+                    tdname.textContent=el.name;
+                    let tdage=document.createElement("td");
+                    tdage.textContent=el.age;
+                    tdcourse.textContent=el.course;
+                    li.appendChild(tdname);
+                    li.appendChild(tdage);
+                    li.appendChild(tdcourse);
+                    tableref.appendChild(li);
+
+        })
+
+
+    </script>
+</div>
+<div class="p2">
+    <h1>Top Skills</h1>
+    <uL id="skilllist">
+        <li>HTML</li>
+        <li>Javascript</li>
+        <li>CSS</li>
+    </uL>
+    <input type="text" id="skill" placeholder="Text" />
+    <button type="submit" id="btn0">Add Skill</button>
+    <p id="data"></p>
+</div>
+<div class="p2"><h1>Contact Form</h1><br>
+    <h2>Name:</h2>
+    <input type="text" id="in" placeholder="Text" />
+    <h2>Email:</h2>
+    <p id="data"></p>
+    <input type="email" id="em" placeholder="Text" /><br>
+    <h1>               </h1>
+    <button type="submit">Submit</button>
+</h1></div>
+<div class="p2"><h1>
+    Fun Zone
+</h1>
+<button id="color">Change background Color</button></div>
+<script>
+let btn=document.querySelector("#color");
+btn.addEventListener('click',()=>{
+    document.body.style.backgroundColor="red";
+});
+</script>
+<script>
+      const input = document.getElementById("in");
+      const bton = document.getElementsByTagName("button");
+      const para = document.getElementById("data");
+      const em =document.getElementById("em");
+
+      bton[1].addEventListener("click", () => {
+        console.log(input.value);
+        console.log(em.value);
+      });
+    </script>
+    <script>
+        const input1=document.getElementById("skill");
+        const bton1=document.getElementsByTagName("button");
+        const listing=document.getElementById("skilllist");
+         bton1[0].addEventListener("click",()=>{
+            const listele=document.createElement("li");
+            listele.textContent =input1.value;
+            listing.appendChild(listele);
+         })
+    </script>
+
+        
+
+    
+
+
+   
+</body>
+</html>
