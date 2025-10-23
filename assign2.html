@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+</head>
+<body>
+    <h1>image viewer</h1>
+    <div id="shoaib"></div>
+    <script>
+        for(var i=5;i<14;i++){
+            let place=document.getElementById("shoaib")
+            imgholder=document.createElement("img");
+            imgholder.src="https://via.assets.so/movie.png?id="+i
+            +"&q=95&w=360&h=360&fit=fill"
+            place.appendChild(imgholder);
+
+        }
+        
+    </script>
+    
+</body>
+</html>
